@@ -1,0 +1,68 @@
+.dock {
+    display: flex;
+    flex-direction: column;
+    left: 0px;
+    top: 0px;
+    padding: 15px;
+    transition: width 0.2s;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.dock-open {
+    width: 250px;
+}
+
+lib-sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sidebar-container,
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-container {
+    flex-grow: 1;
+}
+
+.sidebar-container-end {
+    justify-content: flex-end;
+}
+
+.menu-opener {
+    font-size: 30px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* mobile mode */
+.dock-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.dock-mobile .sidebar-header,
+.dock-mobile .sidebar-container {
+    flex-direction: row-reverse;
+}
+
+.dock-mobile lib-sidebar-container {
+    position: fixed;
+    display: none;
+}
+
+.dock-open.dock-mobile lib-sidebar-container {
+    display: flex;
+    padding: 50px;
+    top: 60px;
+    left: 0;
+    opacity: 0.9;
+}
